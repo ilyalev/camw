@@ -4,6 +4,7 @@ using UnityEngine.Experimental.XR;
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ARTapToPlace : MonoBehaviour
 {
@@ -11,20 +12,24 @@ public class ARTapToPlace : MonoBehaviour
     public GameObject placementIndicator;
 
    // private ARSessionOrigin arOrigin;
-    private ARRaycastManager raycastManager;
+  //  private ARRaycastManager raycastManager;
     private Pose placementPose;
     private float distance=1.5f;
     private Vector3 screenCenter;
     private bool placementPoseIsValid = true;
 
-  
-    
+
+
+
+
     void Start()
     {
         //   arOrigin = FindObjectOfType<ARSessionOrigin>();
-       
-        raycastManager = FindObjectOfType<ARRaycastManager>();
-        
+
+        //     raycastManager = FindObjectOfType<ARRaycastManager>();
+      
+        PlaceObject(GPSEncoder.GPSToUCS(new Vector2(55.236206f, 61.301670f)));
+
     }
 
     // Update is called once per frame
@@ -32,13 +37,13 @@ public class ARTapToPlace : MonoBehaviour
     {
         UpdatePlacementPose();
         UpdatePlacementIndicator();
-        if (Input.touchCount>0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Touch touch = Input.GetTouch(0);
-            PlaceObject(Camera.current.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, distance)));
-        }
-
-
+        /*  if (Input.touchCount>0 && Input.GetTouch(0).phase == TouchPhase.Began)
+          {
+              Touch touch = Input.GetTouch(0);
+              PlaceObject(Camera.current.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, distance)));
+          }*/
+        
+        transform.position = GPSEncoder.GPSToUCS(new Vector2(GPS_.Instance.lattitude, GPS_.Instance.longitude));
     }
 
     private void PlaceObject(Vector3 pos)

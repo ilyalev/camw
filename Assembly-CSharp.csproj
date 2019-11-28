@@ -64,8 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\ARTapToPlace.cs" />
-    <Compile Include="Assets\Script\GPS.cs" />
-    <Compile Include="Assets\Script\updateGPS.cs" />
+    <Compile Include="Assets\Script\GPS_.cs" />
+    <Compile Include="Assets\Script\GPSEncoder.cs" />
+    <Compile Include="Assets\Script\LocServ.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/project/unity/camw/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

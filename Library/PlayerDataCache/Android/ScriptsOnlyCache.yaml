@@ -1,9 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ARTapToPlace
-    - GPS
-    - updateGPS
+    - LocServ
     Unity.XR.ARCore.Editor.dll:
     - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARFoundation.dll:
@@ -65,17 +63,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9892}
-    - Class: 114
       Script: {instanceID: 9924}
     - Class: 114
-      Script: {instanceID: 10220}
+      Script: {instanceID: 10232}
     - Class: 114
-      Script: {instanceID: 10234}
+      Script: {instanceID: 10308}
     - Class: 114
-      Script: {instanceID: 10310}
-    - Class: 114
-      Script: {instanceID: 10554}
+      Script: {instanceID: 10582}
     - Class: 114
       Script: {instanceID: 10930}
     - Class: 114
@@ -281,12 +275,6 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 0515e46d3e4ea210887d8fe24f2ed879
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: updateGPS
-  - hash:
-      serializedVersion: 2
       Hash: d251bf88db6c95a6b1aa0b69298da9ef
     assemblyName: UnityEngine.SpatialTracking.dll
     namespaceName: UnityEngine.SpatialTracking
@@ -359,10 +347,10 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: a6c11cf5c9e7b0de141677bcfc9ccc5e
+      Hash: 35b7bcf9ad7745346307e72d351d293c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GPS
+    className: LocServ
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -387,6 +375,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 8335a5fdc935bf85c693642a36f3b60c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GPS_
   - hash:
       serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
